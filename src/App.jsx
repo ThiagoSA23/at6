@@ -1,19 +1,13 @@
-import { useContext, useEffect } from 'react';
-import { CtContext } from './context/Ct';
-import './App.css';
-import Forms from './components/Forms';
-import Lista from './components/Lista';
-import Lista2 from './components/Lista2';
+import { useState } from 'react'
+import './App.css'
+import List from './components/Lista'
 
-const App = () => {
-  const [CtState, dispatch] = useContext(CtContext);
+function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div>
-      {CtState.Stage === 'First' && <Forms />}
-      {CtState.Stage === 'Second' && <Lista />}
-      {CtState.Stage === 'Third' && <Lista2 />}
-    </div>
-  );
-};
+    <div><List/></div>
+  )
+}
 
-export default App;
+export default App

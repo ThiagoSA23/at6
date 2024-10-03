@@ -16,20 +16,40 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 body {
-  background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEhqzeTOTJm2J-wrSe9kAj3DlAphY5RzFw3W4xf25OPT1AEktfD1Z70sYBclrMDeuD6jAeZzJPByXgH272iG3hxS7AGppznCwS1yzioR77m4J03rVdFLmL3TtLjVmUfaCk-p1D3Jdkj6fp-9U64Tnqg1EMKT9OXpclfVjKrYeqT-OJWdnq9JBh_8ZZKWpsM');
+  background-image:url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/714eb802-4dec-4675-9028-d3c077d4e984/dfsew4q-b5925e9b-cabb-4be8-8f4d-5785259d7f9e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzcxNGViODAyLTRkZWMtNDY3NS05MDI4LWQzYzA3N2Q0ZTk4NFwvZGZzZXc0cS1iNTkyNWU5Yi1jYWJiLTRiZTgtOGY0ZC01Nzg1MjU5ZDdmOWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.YxpUxZb2Ajgu-ZiO6SLCzzUBlfcsQQZnNpQEJoQXpAM') ;   color: white;
+  text-align: center;
   background-size: cover;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.car-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.car-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.car-image {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.car-brand {
+  margin-top: 10px;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
 }
 
 button {
@@ -48,10 +68,55 @@ button {
 }
 
 button:hover {
-  color: white;
   background: linear-gradient(
     90deg,
     rgb(34, 15, 49) 0%,
     rgb(106, 104, 104) 100%
   );
+  color: white;
+}
+body {
+  background-color: #2e2e2e49;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  font-size: 2rem;
+}
+
+form {
+  display: inline-block;
+  text-align: left;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+input, select {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #007BFF;
+  color: white;
 }
