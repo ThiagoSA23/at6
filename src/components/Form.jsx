@@ -6,13 +6,13 @@ function Form() {
     username: '',
     age: '',
     manufacturer: '',
-    car: ''
+    L: ''
   });
 
-  const carOptions = {
-    Alemã: ['Porsche 918 Spyder', 'Mercedes AMG ONE', 'Audi R8 V10'],
-    Italiana: ['Ferrari LaFerrari', 'Lamborghini Aventador SVJ', 'Pagani Huayra'],
-    Japonesa: ['Nissan GT-R R35 Nismo', 'Supra MK4', 'Mazda RX-7 w/ Bodykit Veilside']
+  const LOptions = {
+    topLinguagem: ['JavaScript', 'Python', 'PHP'],
+    MaisComplexas: ['C++', 'Assembly', 'Haskell'],
+    MenosUsada: ['COBOL', 'Fortran', 'Ada']
   };
 
   const handleChange = (event) => {
@@ -23,13 +23,13 @@ function Form() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
-    alert("Obrigado pela sua resposta!"); 
+    alert("Obrigado volte sempre!"); 
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Seu Nome:
+       Nome:
         <input 
           type="text" 
           name="username" 
@@ -41,7 +41,7 @@ function Form() {
       <br />
 
       <label>
-        Sua Idade:
+     Idade:
         <input 
           type="number" 
           name="age" 
@@ -53,7 +53,7 @@ function Form() {
       <br />
 
       <label>
-        País de origem do carro:
+      Categoria da Linguagem:
         <select 
           name="manufacturer"
           value={inputs.manufacturer} 
@@ -61,26 +61,26 @@ function Form() {
           required
         >
           <option value="">Selecione</option>
-          <option value="Japonesa">Japão</option>
-          <option value="Italiana">Italia</option>
-          <option value="Alemã">Alemanha</option>
+          <option value="topLinguagem">Top 3 Linguagens</option>
+          <option value="MaisComplexas">Mais Complexas</option>
+          <option value="MenosUsada">Menos Usadas</option>
         </select>
       </label>
       <br />
 
       {inputs.manufacturer && (
         <label>
-          Escolha seu carro Favorito:
+          Escolha seu Linguagem favorita:
           <select 
-            name="car"
-            value={inputs.car} 
+            name="L"
+            value={inputs.L} 
             onChange={handleChange} 
             required
           >
-            <option value="">Selecione um Carro</option>
-            {carOptions[inputs.manufacturer].map((carOption, index) => (
-              <option key={index} value={carOption}>
-                {carOption}
+            <option value="">Selecione uma linguagem</option>
+            {LOptions[inputs.manufacturer].map((LOption, index) => (
+              <option key={index} value={LOption}>
+                {LOption}
               </option>
             ))}
           </select>
