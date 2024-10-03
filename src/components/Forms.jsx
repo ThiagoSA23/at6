@@ -19,7 +19,7 @@ function MyForm() {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Enter your name:
+        Enter your nome:
         <input
           type="text"
           name="username"
