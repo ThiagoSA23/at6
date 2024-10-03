@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import { CtContext } from "../context/Ct";
 
 function MyForm() {
   const [inputs, setInputs] = useState({});
@@ -35,7 +36,7 @@ function MyForm() {
           onChange={handleChange}
         />
       </label>
-      <input type="submit" />
+      <button onChange={() => dispatch({ type: 'CHANGE_STAGE' })}>Proximo</button>
     </form>
   );
 }
